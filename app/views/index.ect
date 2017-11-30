@@ -1,0 +1,27 @@
+<% extend '_layouts/_default' %>
+
+<% @name = undefined %>
+<% @description = '千年戦争アイギス用のツールを公開しています。' %>
+<% @path = '' %>
+
+<% block 'style': %>
+  <link rel="stylesheet" href="<%= @asset('css/dark.css') %>" />
+<% end %>
+
+<% block 'copyright': %>
+  <li><a href="#">メメンテナンスちゃんを始めキャラクターの画像はほぼ全てぴんくちゃんねるのアイギススレに投稿された物を使用しています。</a></li>
+<% end %>
+
+<nav class="tool-list">
+  <ul>
+    <% for tool in @config.tools: %>
+      <li class="tool tool-<%= tool.id %> <% if tool.deprecated: %>tool-deprecated<% end; %>"><a href="<%= @url(tool.path) %>">
+        <%= tool.name %></a>
+      </li>
+    <% end %>
+  </ul>
+</nav>
+
+<div class="maintenance">
+  <img src="<%= @asset('maintenance.png') %>">
+</div>

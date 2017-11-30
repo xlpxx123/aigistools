@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+  <head>
+    <% include '_parts/_meta' %>
+    <% include '_parts/_styles.ect' %>
+    <% content 'style' %>
+  </head>
+
+  <body>
+    <div id="header" class="header">
+      <% include '_parts/_header.ect' %>
+    </div>
+
+    <div id="content" class="container-fluid">
+      <% content %>
+    </div>
+
+    <footer id="footer" class="footer">
+      <% include '_parts/_footer.ect' %>
+    </footer>
+
+    <% include '_parts/_tracker.ect' %>
+    <% include '_parts/_scripts.ect' %>
+    <% content 'script' %>
+  </body>
+</html>
